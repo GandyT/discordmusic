@@ -1,4 +1,4 @@
 module.exports = {
     PREFIX: "?",
-    TOKEN: "ODg4MjEyNzg0NzI5NDUyNTg1.YUPang.etVemNAWb_l3laIXGqXHoN7I_HA"
+    TOKEN: "ODg4MjEyNzg0NzI5NDUyNTg1.YUPang.BQx2CMiPjto0PIKCHwU70k39Zdk"
 }

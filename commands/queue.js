@@ -15,16 +15,17 @@ module.exports = {
                 .setDescription("Nothing is in queue...")]
         });
 
-        let queueStr = "";
+        let queueStr = `**NOW PLAYING - ${guildData.songQueue[0].name} - <@${guildData.songQueue[0].requester}>**`;
 
-        guildData.songQueue.forEach(song => {
+        guildData.songQueue.slice(1).forEach(song => {
             queueStr += `**${song.name}** - <@${song.requester}>\n`
         })
 
         message.channel.send({
             embeds: [new Discord.MessageEmbed()
                 .setTitle(`**QUEUE FOR ${message.guild.name}**`)
-                .setDescription(queueStr || "Nothing is in queue...")]
+                .setDescription(queueStr || "Nothing is in queue...")
+                .setFooter(`Loop ${guildData.loop ? "Enabled" : "Disabled"}`)]
         });
     }
 }
