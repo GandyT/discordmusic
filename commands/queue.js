@@ -15,6 +15,11 @@ module.exports = {
                 .setDescription("Nothing is in queue...")]
         });
 
+        if (!guildData.songQueue.length) return message.channel.send({
+            embeds: [new Discord.MessageEmbed()
+                .setDescription("Nothing is in queue...")]
+        });
+
         let queueStr = `**NOW PLAYING - ${guildData.songQueue[0].name} - <@${guildData.songQueue[0].requester}>**`;
 
         guildData.songQueue.slice(1).forEach(song => {
